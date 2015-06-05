@@ -1,3 +1,8 @@
+" Keep artifact files tidy
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 " Navigation
 nnoremap <C-Tab> : bnext<CR>
 nnoremap <S-C-Tab> : bprevious<CR>
