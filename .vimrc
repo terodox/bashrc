@@ -13,14 +13,14 @@ set number
 " Visual: Statusline
 set laststatus=2        " always show statusline
 
-set statusline=%t       " base of the filename
+set statusline=%n\ 
+set statusline+=%F       " base of the filename
 set statusline+=%m      " modified flag
 set statusline+=%h      " help file flag
 set statusline+=%r      " read only flag
 set statusline+=%y      " filetype
 set statusline+=%=      " left/right separator
-set statusline+=%c:     " cursor column
-set statusline+=%l/%L   " cursor line/total lines
+set statusline+=%l:%c   " cursor line:column
 
 " Editing: Second chance for bad commands 
 set confirm
