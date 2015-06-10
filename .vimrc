@@ -9,6 +9,7 @@ nnoremap <S-C-Tab> : bprevious<CR>
 
 " Visual: Line numbers
 set number
+set cursorline
 
 " Visual: Statusline
 set laststatus=2        " always show statusline
