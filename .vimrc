@@ -31,3 +31,8 @@ set autoindent
 set shiftwidth=4
 set softtabstop=4
 set expandtab
+
+" Omnicomplete
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete " All omnicomplete, all the time
+inoremap <C-space> <C-x><C-o>
