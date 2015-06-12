@@ -7,6 +7,9 @@ set undodir=~/.vim/undo//
 nnoremap <C-Tab> : bnext<CR>
 nnoremap <S-C-Tab> : bprevious<CR>
 
+" Visual: Theme
+colorscheme desert "murphy darkblue desert
+
 " Visual: Line numbers
 set number
 set cursorline
@@ -32,11 +35,13 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" Omnicomplete
+" Editing: Omnicomplete
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete " All omnicomplete, all the time
 inoremap <C-space> <C-x><C-o>
 
-" CtrlP
+" Editing: CtrlP
 set runtimepath^=~/.vim/plugins/ctrlp.vim
 let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_by_filename = 1
+
