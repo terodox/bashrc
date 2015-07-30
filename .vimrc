@@ -48,3 +48,5 @@ set runtimepath^=~/.vim/plugins/ctrlp.vim
 let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_by_filename = 1
 
+" Plugins: Pathogen
+execute pathogen#infect()
