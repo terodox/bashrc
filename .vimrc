@@ -26,8 +26,11 @@ set statusline+=%y      " filetype
 set statusline+=%=      " left/right separator
 set statusline+=%l:%c   " cursor line:column
 
-" Editing: Second chance for bad commands 
+" Editing: Save me from myself
+set autowrite
+set hidden
 set confirm
+set undofile
 
 " Editing: Automatically indent, and tabs are 4 spaces
 set autoindent
