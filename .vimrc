@@ -43,10 +43,9 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete " All omnicomplete, all the time
 inoremap <C-space> <C-x><C-o>
 
-" Editing: CtrlP
-set runtimepath^=~/.vim/plugins/ctrlp.vim
-let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_by_filename = 1
-
 " Plugins: Pathogen
 execute pathogen#infect()
+
+" Plugins: CtrlP
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_by_filename = 1
