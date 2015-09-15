@@ -2,5 +2,6 @@
 !.gitignore
 !.vimrc
 !/.vim/
-!/.vim/*/
+!/.vim/*
+!/.vim/bundle/*
 !empty
