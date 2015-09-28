@@ -1,7 +1,20 @@
+# None shall pass
 *
+# well of course except this saying so
 !.gitignore
+
+# our basic, shared bash configuration
+!.bashrc
+
+# oh VIM! definitely VIM. That's mostly what we're here for.
 !.vimrc
 !/.vim/
 !/.vim/*
 !/.vim/bundle/*
+
+# There will also be the occasional add-on script, binary or library
+!Extensions/
+!Extensions/*
+
+# ... just in case
 !empty
