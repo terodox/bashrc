@@ -52,4 +52,5 @@ let g:ctrlp_by_filename = 1
 let g:ctrlp_max_files = 0
 
 " Plugins: NERDTree
+map <C-n> :NERDTreeToggle <CR>
 let g:NERDTreeShowHidden = 1
