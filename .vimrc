@@ -47,9 +47,13 @@ inoremap <C-space> <C-x><C-o>
 execute pathogen#infect()
 
 " Plugins: CtrlP
-let g:ctrlp_working_path_mode = 'a'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_clear_cache_on_exit = 0
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'a'
 
 " Plugins: NERDTree
 map <C-n> :NERDTreeToggle <CR>
