@@ -49,7 +49,6 @@ execute pathogen#infect()
 " Plugins: CtrlP
 let g:ctrlp_by_filename = 1
 let g:ctrlp_clear_cache_on_exit = 0
-let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_lazy_update = 1
 let g:ctrlp_max_files = 0
 let g:ctrlp_show_hidden = 1
