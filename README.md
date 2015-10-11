@@ -3,16 +3,18 @@ Configuration and tooling for the CLI environment that I expect to be common on
 all my workstations is managed as a git repository.
 
 ## Getting set up
-This repository somewhat unusual is the intention for it to act as the home 
-folder and its use of git submodules.
+Making this repository somewhat unusual is the intention for it to act as the 
+home folder and its use of git submodules.
 
 The follow steps will accomplish that.
 
-```cd ~/
+```bash
+cd ~/
 git clone https://github.com/jtheriault/dotfiles.git
 mv dotfiles/.git ./
 git pull
-git submodule init```
+git submodule init
+```
 
 ## Configuration
 ### Bash
