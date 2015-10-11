@@ -16,5 +16,8 @@
 !Extensions/
 !Extensions/*
 
+# I suppose I could tell people what this is all about
+!README.md
+
 # ... just in case
 !empty
