@@ -57,4 +57,5 @@ let g:ctrlp_working_path_mode = 'a'
 " Plugins: NERDTree
 map <C-n> :NERDTreeToggle <CR>
 let g:NERDTreeShowHidden = 1
+let g:NERDTreeChDirMode=2
 runtime ~/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
