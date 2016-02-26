@@ -16,6 +16,6 @@ if [ -d "$EXTENSIONS/nvm" ]; then
 fi
 
 # Load workstation-specific customizations
-if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
+if [ -f ~/Local/.bashrc ]; then
+    . ~/Local/.bashrc
 fi
