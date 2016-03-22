@@ -15,6 +15,8 @@ if [ -d "$EXTENSIONS/nvm" ]; then
     $EXTENSIONS/nvm/nvm.sh
 fi
 
+PATH=$PATH:~/Extensions/ifttt-cli
+
 # Load workstation-specific customizations
 if [ -f ~/Local/.bashrc ]; then
     . ~/Local/.bashrc

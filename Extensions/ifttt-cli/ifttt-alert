@@ -1,0 +1,4 @@
+#!/bin/bash
+MESSAGE=$1
+
+ifttt-trigger alert $MESSAGE

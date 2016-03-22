@@ -1,0 +1,12 @@
+#!/bin/bash
+TRIGGER=$1
+VALUE_1=$2
+VALUE_2=$3
+VALUE_3=$4
+
+if [ -z $IFTTT_KEY ]; then
+    echo "A IFTTT_KEY value must be configured in your environment."
+    exit 1
+fi
+
+curl -XPOST -H "Content-Type: application/json" -d '{"value1":"'$VALUE_1'","value2":"'$VALUE_2'","value3":"'$VALUE_3'"}' https://maker.ifttt.com/trigger/$TRIGGER/with/key/$IFTTT_KEY 

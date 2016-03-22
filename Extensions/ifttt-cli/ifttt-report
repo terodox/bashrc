@@ -1,0 +1,6 @@
+#!/bin/bash
+NAME=$1
+MESSAGE=$2
+DETAIL=$3
+
+ifttt-trigger report $NAME $MESSAGE $DETAIL

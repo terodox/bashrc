@@ -14,7 +14,7 @@
 
 # There will also be the occasional add-on script, binary or library
 !Extensions/
-!Extensions/*
+!Extensions/**
 
 # I suppose I could tell people what this is all about
 !README.md
