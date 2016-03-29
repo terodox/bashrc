@@ -59,3 +59,8 @@ map <C-n> :NERDTreeToggle <CR>
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeChDirMode=2
 runtime ~/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
+
+" Plugins: JsDoc
+let g:jsdoc_allow_input_prompt=1
+let g:jsdoc_input_description=1 
+let g:jsdoc_param_description_separator=' - '
