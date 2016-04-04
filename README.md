@@ -32,11 +32,12 @@ In addition to setting core configuration values for key mappings, the status
 line and actual text editing behavior, this installs a number of helpful
 plugins.
 
-* Pathogen
 * BufOnly
 * CtrlP
+* JSDoc
 * NERDTree
 * NERDTree git plugin
+* Pathogen
 * Syntasic
 
 #### Syntastic
@@ -46,3 +47,7 @@ language to be available in the $PATH.
 Ones of particular interest to me include:
 * JSCS
 * JSHint
+
+```bash
+sudo npm install -g jshint jscs
+```
