@@ -9,14 +9,14 @@
 	url = https://github.com/schickling/vim-bufonly
 [submodule "Extensions/nvm"]
 	path = Extensions/nvm
-	url = git@github.com:creationix/nvm.git
+	url = https://github.com/creationix/nvm.git
 	branch = master
 [submodule ".vim/bundle/nerdtree-git-plugin"]
 	path = .vim/bundle/nerdtree-git-plugin
-	url = git@github.com:Xuyuanp/nerdtree-git-plugin.git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git 
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
-[submodule "/Users/joetheriault/.vim/bundle/vim-jsdoc"]
-	path = /Users/joetheriault/.vim/bundle/vim-jsdoc
-	url = git@github.com:heavenshell/vim-jsdoc.git
+[submodule ".vim/bundle/vim-jsdoc"]
+	path = .vim/bundle/vim-jsdoc
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
