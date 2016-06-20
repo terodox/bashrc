@@ -5,6 +5,7 @@
 
 # our basic, shared configuration
 !.bashrc
+!.screenrc
 !.toprc
 
 # oh VIM! definitely VIM. That's mostly what we're here for.
