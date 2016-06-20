@@ -3,8 +3,9 @@
 # well of course except this saying so
 !.gitignore
 
-# our basic, shared bash configuration
+# our basic, shared configuration
 !.bashrc
+!.toprc
 
 # oh VIM! definitely VIM. That's mostly what we're here for.
 !.vimrc
