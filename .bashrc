@@ -18,6 +18,6 @@ fi
 PATH=$PATH:~/Extensions/ifttt-cli
 
 # Load workstation-specific customizations
-if [ -f ~/Local/.bashrc ]; then
-    . ~/Local/.bashrc
+if [ -f $EXTENSIONS/Local/.bashrc ]; then
+    . $EXTENSIONS/Local/.bashrc
 fi
