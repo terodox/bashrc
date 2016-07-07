@@ -14,9 +14,12 @@
 !/.vim/*
 !/.vim/bundle/*
 
-# There will also be the occasional add-on script, binary or library
+# there will also be the occasional add-on script, binary or library
 !Extensions/
 !Extensions/**
+
+# but anything machine-specific will be handled with a different repo
+Extensions/Local
 
 # I suppose I could tell people what this is all about
 !README.md
