@@ -11,13 +11,17 @@ fi
 
 # Set bash prompt (Ubuntu's default is quite nice actually)
 git_status_short() {
-    ADDS=$(git status -s | grep "??" | wc -l)
-    MODS=$(git status -s | egrep "^ ?M" | wc -l)
-    REMS=$(git status -s | egrep "^ ?D" | wc -l)
+    ADDS=`trim $(git status -s | grep "??" | wc -l)`
+    MODS=`trim $(git status -s | egrep "^ ?M" | wc -l)`
+    REMS=`trim $(git status -s | egrep "^ ?D" | wc -l)`
 
     if [ $ADDS != 0 ] || [ $MODS != 0 ] || [ $REMS != 0 ]; then
         echo "(+$ADDS/^$MODS/-$REMS)"
     fi
+}
+
+trim() {
+    echo $1
 }
 
 PROMPT_COMMAND='PS1="\u@\h:\w $(git_status_short)$ "'
