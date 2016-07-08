@@ -9,6 +9,19 @@ if [ ! -f ~/.vim/autoload/pathogen.vim ]; then
     fi
 fi
 
+# Set bash prompt (Ubuntu's default is quite nice actually)
+git_status_short() {
+    ADDS=$(git status -s | grep "??" | wc -l)
+    MODS=$(git status -s | egrep "^ ?M" | wc -l)
+    REMS=$(git status -s | egrep "^ ?D" | wc -l)
+
+    if [ $ADDS != 0 ] || [ $MODS != 0 ] || [ $REMS != 0 ]; then
+        echo "(+$ADDS/^$MODS/-$REMS)"
+    fi
+}
+
+PROMPT_COMMAND='PS1="\u@\h:\w $(git_status_short)$ "'
+
 # Load extensions
 if [ -d "$EXTENSIONS/nvm" ]; then
     . $EXTENSIONS/nvm/nvm.sh
