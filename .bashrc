@@ -11,7 +11,7 @@ fi
 
 # Set bash prompt (Ubuntu's default is quite nice actually)
 git_status_short() {
-    ADDS=`trim $(git status -s | grep "??" | wc -l)`
+    ADDS=`trim $(git status -s | egrep "(\?\?|^ ?A)" | wc -l)`
     MODS=`trim $(git status -s | egrep "^ ?M" | wc -l)`
     REMS=`trim $(git status -s | egrep "^ ?D" | wc -l)`
 
