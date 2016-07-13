@@ -1,10 +1,13 @@
 # None shall pass
 *
+
 # well of course except this saying so
 !.gitignore
 
 # our basic, shared configuration
 !.bashrc
+!/.bashrc.d/
+!/.bashrc.d/*
 !.screenrc
 !.toprc
 

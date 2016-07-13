@@ -1,0 +1,14 @@
+EXTENSIONS=~/Extensions
+
+# Load extensions
+if [ -d "$EXTENSIONS/nvm" ]; then
+    . $EXTENSIONS/nvm/nvm.sh
+    $EXTENSIONS/nvm/nvm.sh
+fi
+
+PATH=$PATH:~/Extensions/ifttt-cli
+
+# Load workstation-specific customizations
+if [ -f $EXTENSIONS/Local/.bashrc ]; then
+    . $EXTENSIONS/Local/.bashrc
+fi
