@@ -1,0 +1,11 @@
+gitr() { 
+    COMMAND=$1
+
+    for REPO in $(find . -maxdepth 2 -type d -name .git -exec dirname \{} \;); 
+    do 
+        pushd $REPO >> /dev/null
+        echo "---- $REPO ----"
+        git $COMMAND
+        popd >> /dev/null
+    done 
+}
