@@ -1,5 +1,5 @@
 gitr() { 
-    COMMAND=$1
+    COMMAND=$@
 
     for REPO in $(find . -maxdepth 2 -type d -name .git -exec dirname \{} \;); 
     do 
