@@ -11,8 +11,3 @@ do
         PATH=$PATH:$EXTENSION
     fi
 done
-
-if [ -d "$EXTENSIONS_DIR/nvm" ]; then
-    . $EXTENSIONS_DIR/nvm/nvm.sh
-    $EXTENSIONS_DIR/nvm/nvm.sh
-fi
