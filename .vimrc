@@ -43,6 +43,9 @@ filetype plugin on
 set omnifunc=syntaxcomplete#Complete " All omnicomplete, all the time
 inoremap <C-space> <C-x><C-o>
 
+" File: Ignore certain paths
+set wildignore+=*/.git/*,*/node_modules/*
+
 " Plugins: Pathogen
 execute pathogen#infect()
 
