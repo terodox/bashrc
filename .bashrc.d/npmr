@@ -1,0 +1,11 @@
+npmr() { 
+    COMMAND=$@
+
+    for MODULE in $(find . -maxdepth 2 -type f -name package.json -exec dirname \{} \;); 
+    do 
+        pushd $MODULE >> /dev/null
+        echo "---- $MODULE ----"
+        npm $COMMAND
+        popd >> /dev/null
+    done 
+}
