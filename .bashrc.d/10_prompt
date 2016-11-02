@@ -1,4 +1,23 @@
 # Set bash prompt (Ubuntu's default is quite nice actually)
+exit_code_mark() {
+    EXIT_CODE=$? # Must come first!
+
+    # Constants for understandable formatting
+    FORMAT_COLOR_RED='\[\e[0;31m\]'
+    FORMAT_COLOR_GREEN='\[\e[0;32m\]'
+    FORMAT_RESET='\[\e[00m\]'
+    FancyX='\342\234\227'
+    Checkmark='\342\234\223'
+
+    # If it was successful, print a green check mark. Otherwise, print
+    # a red X.
+    if [[ $EXIT_CODE == 0 ]]; then
+        echo "$FORMAT_COLOR_GREEN$Checkmark$FORMAT_RESET"
+    else
+        echo "$FORMAT_COLOR_RED$FancyX$FORMAT_RESET"
+    fi
+}
+
 git_status_short() {
     if git rev-parse --show-toplevel &> /dev/null; then
         ADDS=`trim $(git status -s | egrep "(\?\?|^ ?A)" | wc -l)`
@@ -15,4 +34,4 @@ trim() {
     echo $1
 }
 
-PROMPT_COMMAND='PS1="\u@\h:\w $(git_status_short)$ "'
+PROMPT_COMMAND='PS1="$(exit_code_mark) \u@\h:\w $(git_status_short)$ "'
