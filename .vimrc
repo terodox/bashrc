@@ -71,4 +71,4 @@ runtime ~/.vim/bundle/nerdtree-git-plugin/nerdtree_plugin/git_status.vim
 let g:jsdoc_allow_input_prompt=1
 let g:jsdoc_input_description=1 
 let g:jsdoc_param_description_separator=' - '
-nmap <silent> <C-l> $?function<cr>:noh<cr><Plug>(jsdoc)
+nmap <silent> <C-S-d> $?function<cr>:noh<cr><Plug>(jsdoc)
