@@ -26,6 +26,10 @@ set statusline+=%y      " filetype
 set statusline+=%=      " left/right separator
 set statusline+=%l:%c   " cursor line:column
 
+" Visual: Search highlighting
+set hlsearch  "think: highlighted search
+map <silent> <Esc> :noh<CR>
+
 " Editing: Save me from myself
 set autowrite
 set hidden
