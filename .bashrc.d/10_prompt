@@ -18,14 +18,28 @@ exit_code_mark() {
     fi
 }
 
+is_git_repo() {
+    git rev-parse --show-toplevel &> /dev/null
+}
+
+git_branch() {
+    if is_git_repo; then
+        BRANCH=$(git branch | grep '*' | awk '{print $2}')
+
+        if [ "$BRANCH" != "master" ]; then
+            echo "[$BRANCH] "
+        fi
+    fi
+}
+
 git_status_short() {
-    if git rev-parse --show-toplevel &> /dev/null; then
+    if is_git_repo; then
         ADDS=`trim $(git status -s | egrep "(\?\?|^ ?A)" | wc -l)`
         MODS=`trim $(git status -s | egrep "^ ?[CRM]" | wc -l)`
         REMS=`trim $(git status -s | egrep "^ ?D" | wc -l)`
 
         if [ $ADDS != 0 ] || [ $MODS != 0 ] || [ $REMS != 0 ]; then
-            echo "(+$ADDS/^$MODS/-$REMS)"
+            echo "(+$ADDS/^$MODS/-$REMS) "
         fi
     fi
 }
@@ -34,4 +48,4 @@ trim() {
     echo $1
 }
 
-PROMPT_COMMAND='PS1="$(exit_code_mark) \u@\h:\w $(git_status_short)$ "'
+PROMPT_COMMAND='PS1="$(exit_code_mark) \h:\w $(git_branch)$(git_status_short)$ "'
