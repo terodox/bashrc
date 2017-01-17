@@ -11,3 +11,5 @@ startup_message off
 
 termcapinfo * ti@:te@
 defscrollback 10000
+mousetrack on
+
