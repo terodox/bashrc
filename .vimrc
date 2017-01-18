@@ -1,7 +1,9 @@
 " Keep artifact files tidy
+if has('persistent_undo')
+    set undodir=~/.vim/undo//
+endif
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
-set undodir=~/.vim/undo//
 
 " Navigation
 nnoremap <C-Tab> : bnext<CR>
@@ -31,10 +33,12 @@ set hlsearch  "think: highlighted search
 map <silent> <Esc> :noh<CR>
 
 " Editing: Save me from myself
+if has('persistent_undo')
+    set undofile
+endif
 set autowrite
 set hidden
 set confirm
-set undofile
 
 " Editing: Automatically indent, and tabs are 4 spaces
 set autoindent
