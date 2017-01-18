@@ -12,14 +12,17 @@ The follow steps will accomplish that.
 cd ~/
 git clone https://github.com/jtheriault/dotfiles.git
 mv dotfiles/.git ./
-git pull
+git checkout .
 git submodule init
+git submodule update
+mkdir -p .vim/autoload
+source .bashrc
 ```
 
 ## Configuration
 ### Bash
-This replaces the .bashrc file to establish common settings, extensions and 
-load .bash_local (if it exists) to perform similar workstation-specific tasks.
+This installs an extensible .bashrc system which loads spreads configuration 
+across separate files in the ~/.bashrc.d/ directory.
 
 ### NVM
 This installs and loads nvm into each running shell to provide whatever node
@@ -51,3 +54,6 @@ Ones of particular interest to me include:
 ```bash
 sudo npm install -g jshint jscs
 ```
+### GNU Screen
+GNU screen is also a notable tool in my workflow. My default configuration is
+included here and references to it in scripts may arise.
