@@ -6,7 +6,7 @@ all my workstations is managed as a git repository.
 Making this repository somewhat unusual is the intention for it to act as the 
 home folder and its use of git submodules.
 
-The follow steps will accomplish that.
+The following steps are an example of how to install it.
 
 ```bash
 cd ~/
