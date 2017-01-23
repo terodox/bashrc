@@ -9,7 +9,6 @@ hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u
 
 startup_message off
 
-termcapinfo * ti@:te@
+termcapinfo xterm* ti@:te@
 defscrollback 10000
-mousetrack on
 
