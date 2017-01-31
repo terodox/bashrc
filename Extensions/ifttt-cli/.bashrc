@@ -1,4 +1,6 @@
-export IFTTT_KEY=$(cat ~/.ifttt-api-key)
+IFTTT_API_KEY_CONFIG=~/.ifttt-api-key
 
-# Add this folder to path
+export IFTTT_KEY=$(if [ -f $IFTTT_API_KEY_CONFIG ]; then cat $IFTTT_API_KEY_CONFIG; fi)
+
+# Add the current folder to path
 export PATH=$(dirname $BASH_SOURCE):$PATH
