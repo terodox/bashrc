@@ -1,11 +1,13 @@
+FORMAT_COLOR_RED='\[\e[0;31m\]'
+FORMAT_COLOR_GREEN='\[\e[0;32m\]'
+FORMAT_COLOR_YELLOW='\[\e[0;33m\]'
+FORMAT_RESET='\[\e[00m\]'
+
 # Set bash prompt (Ubuntu's default is quite nice actually)
 exit_code_mark() {
     EXIT_CODE=$? # Must come first!
 
     # Constants for understandable formatting
-    FORMAT_COLOR_RED='\[\e[0;31m\]'
-    FORMAT_COLOR_GREEN='\[\e[0;32m\]'
-    FORMAT_RESET='\[\e[00m\]'
     FancyX='\342\234\227'
     Checkmark='\342\234\223'
 
@@ -48,4 +50,12 @@ trim() {
     echo $1
 }
 
-PROMPT_COMMAND='PS1="$(exit_code_mark) \h:\w $(git_branch)$(git_status_short)$ "'
+if [ "$HOST_CAUTION_LEVEL" = "DANGER" ]; then
+    HOST_FORMAT=$FORMAT_COLOR_RED
+elif [ "$HOST_CAUTION_LEVEL" = "CAREFUL" ]; then
+    HOST_FORMAT=$FORMAT_COLOR_YELLOW
+elif [ "$HOST_CAUTION_LEVEL" = "SAFE" ]; then
+    HOST_FORMAT=$FORMAT_COLOR_GREEN
+fi
+
+PROMPT_COMMAND='PS1="$(exit_code_mark) $HOST_FORMAT\h$FORMAT_RESET:\w $(git_branch)$(git_status_short)$ "'
