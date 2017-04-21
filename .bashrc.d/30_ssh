@@ -1,0 +1,25 @@
+SSH_AGENT_SETUP=~/.ssh_agent
+
+ssh_ensure_agent() {
+    if [ ! -f $SSH_AGENT_SETUP ]; then
+        ssh-agent -s > $SSH_AGENT_SETUP
+    fi
+
+    if [ -z $SSH_AGENT_PID ]; then
+        source $SSH_AGENT_SETUP 
+    fi
+    
+    if ! ps --pid $SSH_AGENT_PID &>/dev/null; then
+        ssh-agent -s > $SSH_AGENT_SETUP
+
+        source $SSH_AGENT_SETUP 
+
+        for key in $(ls ~/.ssh/*.pub); do 
+            ssh-add ${key%.*}
+        done
+    fi
+
+    ssh $@
+}
+
+alias ssh='ssh_ensure_agent'
