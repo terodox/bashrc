@@ -9,7 +9,7 @@ ssh_ensure_agent() {
         source $SSH_AGENT_SETUP 
     fi
     
-    if ! ps --pid $SSH_AGENT_PID &>/dev/null; then
+    if ! ps -p $SSH_AGENT_PID &>/dev/null; then
         ssh-agent -s > $SSH_AGENT_SETUP
 
         source $SSH_AGENT_SETUP 
