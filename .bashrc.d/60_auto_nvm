@@ -1,0 +1,9 @@
+cd_nvm() { 
+    cd $@
+
+    if [ -f .nvmrc ]; then 
+        nvm use
+    fi
+}
+
+alias cd="cd_nvm"
