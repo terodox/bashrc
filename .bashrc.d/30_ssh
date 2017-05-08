@@ -18,8 +18,12 @@ ssh_ensure_agent() {
             ssh-add ${key%.*}
         done
     fi
+}
+
+ssh_ensure_agent_and_ssh() {
+    ssh_ensure_agent
 
     ssh $@
 }
 
-alias ssh='ssh_ensure_agent'
+alias ssh='ssh_ensure_agent_and_ssh'
