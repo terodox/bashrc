@@ -1,4 +1,7 @@
-# Common Environment 
+# This repo is based on
+https://github.com/jtheriault/dotfiles
+
+# Common Environment
 Configuration and tooling for the CLI environment that I expect to be common on
 all my workstations is managed as a git repository.
 
