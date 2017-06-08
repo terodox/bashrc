@@ -13,7 +13,7 @@ The following steps are an example of how to install it.
 
 ```bash
 cd ~/
-git clone https://github.com/jtheriault/dotfiles.git
+git clone https://github.com/terodox/bashrc.git
 mv dotfiles/.git ./
 git checkout .
 git submodule init
