@@ -28,9 +28,7 @@ git_branch() {
     if is_git_repo; then
         BRANCH=$(git branch | grep '*' | awk '{print $2}')
 
-        if [ "$BRANCH" != "master" ]; then
-            echo "[$BRANCH] "
-        fi
+        echo "\W\[\033[32m\][$BRANCH]\[\033[00m\] "
     fi
 }
 
