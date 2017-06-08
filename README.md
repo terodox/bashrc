@@ -27,33 +27,3 @@ across separate files in the ~/.bashrc.d/ directory.
 ### NVM
 This installs and loads nvm into each running shell to provide whatever node
 version is correct for my work.
-
-### Vim
-A significant aspect of this repo is establishing my preferred VIM environment.
-
-In addition to setting core configuration values for key mappings, the status 
-line and actual text editing behavior, this installs a number of helpful
-plugins.
-
-* BufOnly
-* CtrlP
-* JSDoc
-* NERDTree
-* NERDTree git plugin
-* Pathogen
-* Syntasic
-
-#### Syntastic
-In order for this syntax checker to work, it depends on external tools for each
-language to be available in the $PATH. 
-
-Ones of particular interest to me include:
-* JSCS
-* JSHint
-
-```bash
-sudo npm install -g jshint jscs
-```
-### GNU Screen
-GNU screen is also a notable tool in my workflow. My default configuration is
-included here and references to it in scripts may arise.
