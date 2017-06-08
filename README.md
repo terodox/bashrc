@@ -18,7 +18,6 @@ mv dotfiles/.git ./
 git checkout .
 git submodule init
 git submodule update
-mkdir -p .vim/autoload
 source .bashrc
 ```
 
