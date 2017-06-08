@@ -28,7 +28,7 @@ git_branch() {
     if is_git_repo; then
         BRANCH=$(git branch | grep '*' | awk '{print $2}')
 
-        echo "\W\[\033[32m\][$BRANCH]\[\033[00m\] "
+        echo "\W$FORMAT_COLOR_GREEN[$BRANCH]$FORMAT_RESET "
     fi
 }
 
