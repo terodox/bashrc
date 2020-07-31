@@ -1,16 +1,39 @@
-# None shall pass
-*
+###########################################
+# Mac OS
+###########################################
 
-# well of course except this saying so
-!.gitignore
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
 
-# our basic, shared configuration
-!.bashrc
-!/.bashrc.d/
-!/.bashrc.d/*
+# Icon must end with two \r
+Icon
 
-# I suppose I could tell people what this is all about
-!README.md
+# Thumbnails
+._*
 
-# ... just in case
-!empty
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+###########################################
+# VS Code
+###########################################
+.vscode/*
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
