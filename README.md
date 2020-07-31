@@ -6,24 +6,21 @@ Configuration and tooling for the CLI environment that I expect to be common on
 all my workstations is managed as a git repository.
 
 ## Getting set up
-Making this repository somewhat unusual is the intention for it to act as the 
-home folder and its use of git submodules.
+Making this repository somewhat unusual is the intention for it to act as the home folder.
 
-The following steps are an example of how to install it.
+The following steps are an example of how to use it.
 
 ```bash
-cd ~/
+cd [Your favorite directory for git files]
 git clone https://github.com/terodox/bashrc.git
-mv dotfiles/.git ./
-git checkout .
-git submodule init
-git submodule update
+cp -r ${PWD}/bashrc/. ~/
+cd ~/
 source .bashrc
 ```
 
 ## Configuration
 ### Bash
-This installs an extensible .bashrc system which loads spreads configuration 
+This installs an extensible .bashrc system which loads spreads configuration
 across separate files in the ~/.bashrc.d/ directory.
 
 ### NVM
