@@ -28,6 +28,11 @@ git_branch() {
     if is_git_repo; then
         BRANCH=$(git branch | grep '*' | awk '{print $2}')
 
+        if [ ${#BRANCH} -ge 20 ]; then
+            SHORT_BRANCH=$(echo ${BRANCH} | cut -c 1-20)
+            BRANCH=${SHORT_BRANCH}...
+        fi
+
         echo "\W$FORMAT_COLOR_GREEN[$BRANCH]$FORMAT_RESET "
     fi
 }
